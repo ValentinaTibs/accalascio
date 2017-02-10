@@ -1,0 +1,66 @@
+{% extends "template.html" %}
+{% load static %}
+{% block title %} GranSassoSkI  {% endblock %}
+{% block navbarbkg %} accalascio {% endblock %}
+{% block navbar %} 
+<ul class="nav-list">
+    <li class="nav-item">
+    <a class="pure-button mybutton" href="montagna-attivita.html">B&B</a>
+    </li>
+    <li class="nav-item">
+
+    <a class="pure-button mybutton" href="montagna-attrezzatura.html">appartamenti</a>
+    </li>
+</ul>
+{% endblock %}
+{% block content %}
+    
+    <img class="pure-img" src= {%static "/img/expor.png" %}>
+        {% for room in rooms %}
+                <section class="post">
+                    <div class="pure-img-responsive pure-g">
+                            <div class="pure-u-1 pure-u-md-1-1">
+                                <img class="post-avatar" alt="{{room.icon.name}}" style="float:left;" height="45" width="45" src="../../../../../static/img/rooms/{{room.icon|safe}}">
+
+                                <h3>  &nbsp; {{room.title}} </h3>
+                                <h4>  <a href="/book/{{ room.id }}/">Prenota la stanza</a></h4>
+                                <h5>
+                                {% for fac in room.facilites.all %}
+                                    <img class="post-avatar no-border" alt="{{post.icon.name}}" height="45" width="45" src="../../../../../static/img/icons/{{fac.png|safe}}.png">
+                                {% endfor %}  
+                                </h5>
+                                
+                                <div class="post-description">
+                                    <p>
+                                          {{room.text|safe}}
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="post-images pure-g">
+                                 {% for image in room.images.all %}
+
+                                        <div class="pure-u-1 pure-u-md-1-4">
+                                            
+                                                <img alt="Photo of someone working poolside at a resort"
+                                                    class="pure-img-responsive"
+                                                    
+                                                    src="../../../../../static/uploads/{{image.content}}">
+                                            
+                                            <div class="post-image-meta">
+                                                <h3>{{room.name}}</h3>
+                                            </div>
+                                            <p class="post-description foto-desc">
+                                                <i> {{image.description}}</i>
+                                            </p>
+                                        </div>
+                                
+                                {% endfor %}  
+                                
+                            </div>
+                            
+                    </div>
+
+                    
+                </section>
+        {% endfor %}  
+{% endblock %}

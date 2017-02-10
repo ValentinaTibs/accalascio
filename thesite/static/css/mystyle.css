@@ -1,0 +1,57 @@
+
+h1, .pure-menu-heading {
+font-family: 'Julius Sans One', sans-serif;
+}
+#site-header{
+	z-index : 2;
+	position:fixed;
+}
+
+.montagna{
+	background-image: url("../img/montagna/adonis.jpg") ;
+}
+
+.home{
+	background-image: url("../img/lorenzo2.jpg") ;	
+}
+
+.eventi{
+	background-image: url("../img/calascio12.jpg") ;	
+}
+
+.accalascio{
+	background-image: url("../img/accalascio.png") ;
+}
+.pure-img{
+	width:100%;
+	padding: 3%;
+}
+
+.attrezzatura{
+	background-image: url("../img/horses.jpg") ;
+	
+}
+.mybutton{
+	background-color: rgb(176, 202, 219) !important;
+}
+
+.foto-desc{
+	padding: 5%;
+}
+
+.index-body{
+	padding: 0 !important;
+}
+
+.post{padding: 2%;}
+
+/*#id_text_ifr{400px !important;}*/
+
+
+
+.no-border{border:none;    border-radius: 0;}
+.foto-desc{color: #ddd;}
+
+.pricing-table-header{background-color: #ddd ;}
+
+.maps{background-image: url("../img/gmaps.png") !important}

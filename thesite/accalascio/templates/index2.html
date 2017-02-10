@@ -1,0 +1,160 @@
+{% extends "template.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %} GranSassoSkI  {% endblock %}
+{% block navbarbkg %} home {% endblock %}
+{% block navbar %} {% endblock %}
+
+
+{% block content %}
+
+    <div class="pure-g">
+        <div class="photo-box u-1 u-med-1-3 u-lrg-1-4">                
+            <img src= {%static "/img/cornogr.jpg" alt="Corno Grande" %}>
+            <aside class="photo-box-caption">
+                <span>{% trans "escursione sul" %} <b>Corno Grande</b></span>
+            </aside>
+        </div>
+
+        <div class="text-box u-1 u-med-2-3 u-lrg-3-4">
+            <div class="l-box">
+                <h1 class="text-box-head">GRANSASSOSKI.it</h1>
+                <h2 ></h2>
+                <p class="text-box-subhead"><br/> 
+                    {% blocktrans %} 
+                    affittacamere AccaLascio, escursioni, noleggio attrezzatura,
+                    cavalli, MBX, ciaspole, escursioni sulla neve, B&B
+                    {% endblocktrans %}
+                </p>
+                <p> <br/> Calascio, Abruzzo, Italy, Earth </p>
+                
+                <br/>
+            </div>
+        </div>
+    </div>
+    <div class="pure-g">
+        <div class="photo-box u-1 u-med-1-2 u-lrg-2-3">
+            
+                <img src= {%static "/img/camicia1.jpg" %}>
+            
+
+            <aside class="photo-box-caption">
+                <span>
+                    via di cresta <b>monte Camicia</b>
+                </span>
+            </aside>
+        </div>
+
+        <div class="photo-box u-1 u-med-1-2 u-lrg-1-3">                
+            <img src= {%static "//img/panorama1.jpg" alt="Flowers"%}>            
+
+            <aside class="photo-box-caption">
+                <span> sopra le nuvole splende il sole</span>
+            </aside>
+        </div>
+    </div>
+    <div class="pure-g">
+        <div class="photo-box u-1 u-med-2-2 u-lrg-1-3">
+            <img src= {%static "/img/horses.jpg" alt="Cavalli"%}>              
+
+            <aside class="photo-box-caption">
+                <span>
+                    cavalli selvatici a <b>Lago di Racollo</b>
+                </span>
+            </aside>
+        </div>
+
+        <div class="photo-box photo-box-thin u-1 u-med-2-2 u-lrg-2-3">
+            <img src= {%static "/img/camcamino3.jpg" alt="Cam Camino"%}>
+
+            <aside class="photo-box-caption">
+                <span>
+                    Camera matrimoniale con caminetto
+                </span>
+            </aside>
+        </div>
+    </div>
+    <div class="pure-g">
+        <div class="photo-box photo-box-thin u-1 u-med-2-3">
+            
+                <img src= {%static "/img/ciaspole3.jpg" alt="Ciaspole"%}>
+            
+
+            <aside class="photo-box-caption">
+                <span>
+                    escursione con ciaspole a <b>Piani di Pezza</b>
+                </span>
+            </aside>
+        </div>
+
+        <div class="photo-box u-1 u-med-1-3">
+                <img src= {%static "/img/camblu2.jpg" alt="Port"%}>
+
+            <aside class="photo-box-caption">
+                <span>
+                    appartamentino <b> Azzurrino</b>
+
+                </span>
+            </aside>
+        </div>
+    </div>
+
+
+
+    <!--Sezione Partner-->
+    <div class="u-1">
+        <div class="l-box">
+            <h2>GRANSASSOSKI</h2>
+
+            <p>
+                Il progetto GRANSASSOSKI nasce dall'impegno e l'amore per la montagna di Lorenzo e Mara. Lorenzo e' guida alpina certificata oltre ad essere un uomo non male, nonostante l'eta' che comunque avanza. 
+            </p>
+
+
+            <h3> Partner & Info</h3>
+                <div class="pure-g">
+                
+                
+                    <div class="u-1 u-med-1-6 u-lrg-1-6">
+                        <a href="http://www.dillonmcintosh.tumblr.com/">
+                            <img class="pure-img-responsive" src= {%static "/img/partner/accompagnatore.png" alt="Corno Grande"%}>
+                        </a>
+
+                    </div>
+                    <div class="photo-box u-1 u-med-1-6 u-lrg-1-6">
+                        <a href="http://www.dillonmcintosh.tumblr.com/">
+                            <img class="pure-img-responsive" src= {%static "/img/partner/mountain.png" alt="Corno Grande"%}>
+                        </a>
+
+                    </div>
+                    <div class="photo-box u-1 u-med-1-6 u-lrg-1-6">
+                        <a href="http://www.dillonmcintosh.tumblr.com/">
+                            <img class="pure-img-responsive" src= {%static "/img/partner/paesionline.png" alt="Corno Grande"%}>
+                        </a>
+
+                        
+                    </div>
+                    <div class=" u-1 u-med-1-6 u-lrg-1-6">
+                        <a href="http://www.dillonmcintosh.tumblr.com/">
+                            <img class="pure-img-responsive" src= {%static "/img/partner/parks-it.gif" alt="Corno Grande"%}>
+                        </a>
+
+                    </div>
+                        <div class=" u-1 u-med-1-6 u-lrg-1-6">
+                        <a href="http://www.dillonmcintosh.tumblr.com/">
+                            <img class="pure-img-responsive" src= {%static "/img/partner/tripadvisor.png" alt="Corno Grande"%}>
+                        </a>
+
+                    </div>
+                    <div class=" u-1 u-med-1-6 u-lrg-1-6">
+                        <a href="http://www.dillonmcintosh.tumblr.com/">
+                            <img class="pure-img-responsive" src= {%static "/img/partner/3bmeteo.png" alt="Corno Grande"%}>
+                        </a>
+
+                    </div>
+
+            </div>
+        </div>
+    </div>
+ {% endblock %}        
+

@@ -1,0 +1,108 @@
+{% extends "template.html" %}
+{% load static %}
+
+{% block title %} GranSassoSkI  {% endblock %}
+
+{% block navbarbkg %} montagna {% endblock %}
+{% block navbar %} 
+<ul class="nav-list">
+    <li class="nav-item">
+    <a class="pure-button mybutton" href="/montagna">attivita</a>
+    </li>
+    <li class="nav-item">
+
+    <a class="pure-button mybutton" href="/affitto">attrezzatura</a>
+    </li>
+</ul>
+{% endblock %}
+
+{% block content %}
+<div class="posts">
+        <h1 class="content-subhead">...le nostre attivita'</h1>
+         {% for post in all_post %}
+
+            <section class="post">
+                <header class="post-header">
+                    <img class="post-avatar " alt="{{post.icon.name}}" height="80" width="80" src="../../../../../static/img/icons/{{post.icon.png|safe}}.png">
+
+                    <h2 class="post-title">{{post.title}}</h2>
+                    <p class="post-meta">
+                        periodo <a href="#" class="post-author">{{post.interval}}</a> livello da 
+                        <a class="post-category post-category-js" href="#" style="background-color:#{{post.startcat.color}}">{{post.startcat}}</a> a 
+                        <a class="post-category post-category-pure" href="#" style="background-color:#{{post.endcat.color}}">{{post.endcat}}</a> -- 
+                        <i> <a href="../affitto">noleggia attrezzatura</a>.</i>
+                    </p>
+                </header>
+
+                <div class="post-description">
+                    
+                       {{post.text|safe}}
+                    
+                </div>
+            </section>
+        {% endfor %}
+
+<!--
+        <section class="post">
+            <header class="post-header">
+                <img class="post-avatar" alt="Reid Burke&#x27;s avatar" height="48" width="48" src="./img/icons/snow-trek.png">
+
+                <h2 class="post-title">camminate sulla neve</h2>
+
+                <p class="post-meta">
+                    periodo <a href="#" class="post-author">novembre-febbraio</a> livello da <a class="post-category post-category-js" href="#">MezzaPippa</a> a <a class="post-category " href="#">MAH</a> -- <i> <a href="montagna-attrezzatura.html">noleggia attrezzatura</a>.</i>
+                </p>
+            </header>
+
+            <div class="post-description">
+            <p>
+                    io prima di vederle mica lo sapevo che diamine erano le ciaspole eppure una volta me le so messe ai piedi. Insomma, e' stato un gran mazzo, poi i piedi ti sudano, ma meglio degli sci da fondo. Almeno non ti fanno male le chiappe.
+                </p>
+                <div class="post-images pure-g">
+                    <div class="pure-u-1 pure-u-md-1-2">
+                        <a href="http://www.flickr.com/photos/uberlife/8915936174/">
+                            <img alt="Photo of someone working poolside at a resort"
+                                    class="pure-img-responsive"
+                                    src="./img/snow.jpg">
+                        </a>
+
+                        <div class="post-image-meta">
+                            <h3>ciaspole</h3>
+                        </div>
+                    </div>
+
+                    <div class="pure-u-1 pure-u-md-1-2">
+                        <a href="http://www.flickr.com/photos/uberlife/8907351301/">
+                            <img alt="Photo of the sunset on the beach"
+                                    class="pure-img-responsive"
+                                    src="./img/snow.jpg">
+                        </a>
+
+                        <div class="post-image-meta">
+                            <h3>..non so</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="post">
+            <header class="post-header">
+                <img class="post-avatar" alt="Andrew Wooldridge&#x27;s avatar" height="48" width="48" src="./img/icons/bike.png">
+
+                <h2 class="post-title">bicicletta & MTB</h2>
+
+                <p class="post-meta">
+                    By <a class="post-author" href="#">Andrew Wooldridge</a> under <a class="post-category post-category-yui" href="#">YUI</a> -- <i> <a href="montagna-attrezzatura.html">noleggia attrezzatura</a>.</i>
+                </p>
+            </header>
+
+            <div class="post-description">
+                <p>
+                    We are happy to announce the release of YUI 3.10.2! You can find it now on the Yahoo! CDN, download it directly, or pull it in via npm. We’ve also updated the YUI Library website with the latest documentation.
+                </p>
+            </div>
+        </section>-->
+    </div>
+
+{% endblock %}       

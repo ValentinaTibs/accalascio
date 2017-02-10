@@ -1,0 +1,115 @@
+{% extends "template.html" %}
+{% load static %}
+
+{% block title %} GranSassoSkI  {% endblock %}
+
+{% block navbarbkg %} montagna {% endblock %}
+{% block navbar %} 
+<ul class="nav-list">
+    <li class="nav-item">
+    <a class="pure-button mybutton" href="/montagna">attivita</a>
+    </li>
+    <li class="nav-item">
+
+    <a class="pure-button mybutton" href="/affitto">attrezzatura</a>
+    </li>
+</ul>
+{% endblock %}
+
+{% block content %}
+
+            <!-- A wrapper for all the blog posts -->
+            <div class="posts">
+                <h1 class="content-subhead"> ATTIVITA <b>da fare ORA!</b></h1>
+
+                <!-- A single blog post -->
+                <section class="post">
+                <header class="post-header">
+                   blalvaslaslc
+                </header>
+
+                <div class="post-description">
+                   Puoi fare quwadn a
+                </div>
+                     <div class="pricing-tables pure-g">
+        <div class="pure-u-1 pure-u-md-1-3">
+            <div class="pricing-table pricing-table-free">
+                <div class="pricing-table-header">
+                    <h2>trekking </h2>
+                        <img  alt="Tilo Mitra&#x27;s avatar" height="150" width="150" src = {%static "/img/icons/trek.png" %} >
+                    
+                </div>
+
+                <ul class="pricing-table-list">
+                    <li>Free setup</li>
+                    <li>Custom sub-domain</li>
+                    <li>Standard customer support</li>
+                    <li>1GB file storage</li>
+                    <li>1 database</li>
+                    <li>Unlimited bandwidth</li>
+                </ul>
+
+                <button class="button-choose pure-button">Choose</button>
+            </div>
+        </div>
+
+        <div class="pure-u-1 pure-u-md-1-3">
+            <div class="pricing-table pricing-table-biz pricing-table-selected">
+                <div class="pricing-table-header">
+                     <h2>neve</h2>
+                        <img  alt="Tilo Mitra&#x27;s avatar" height="150" width="150" src= {%static "/img/icons/snow-casco.png" %} >
+                    
+                </div>
+
+                <ul class="pricing-table-list">
+                    <li>Free setup</li>
+                    <li>Use your own domain</li>
+                    <li>Standard customer support</li>
+                    <li>10GB file storage</li>
+                    <li>5 databases</li>
+                    <li>Unlimited bandwidth</li>
+                </ul>
+
+                <button class="button-choose pure-button">Choose</button>
+            </div>
+        </div>
+
+        <div class="pure-u-1 pure-u-md-1-3">
+            <div class="pricing-table pricing-table-enterprise">
+                <div class="pricing-table-header">
+                     <h2>bici & MTB</h2>
+                        <img  alt="Tilo Mitra&#x27;s avatar" height="150" width="150" src= {%static "/img/icons/bike.png" %} >
+                    
+                </div>
+
+                <ul class="pricing-table-list">
+                    <li>Free setup</li>
+                    <li>Use your own domain</li>
+                    <li>Premium customer support</li>
+                    <li>Unlimited file storage</li>
+                    <li>25 databases</li>
+                    <li>Unlimited bandwidth</li>
+                </ul>
+
+                <button class="button-choose pure-button">Choose</button>
+            </div>
+        </div>
+    </div> <!-- end pricing-tables -->
+
+                </section>
+            </div>
+
+
+<div class="u-1 form-box">
+            <div class="l-box">
+                <h2>If you want any information about </h2>
+
+                <form class="pure-form">
+                    <input type="text" placeholder="Photo URL" required>
+                    <input type="text" placeholder="Email">
+                    <button type="submit" class="pure-button">Submit</button>
+                </form>
+            </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+{% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A layout example that shows off a responsive photo gallery.">
+
+    <title>{% block title%}{% endblock %}</title>  
+
+      
+
+    <link rel="stylesheet" href={%static "/css/pure-release-0.6.0/pure-min.css" %}>
+
+        <!--[if lte IE 8]>
+            <link rel="stylesheet" href="css/layouts/gallery-grid-old-ie.css">
+        <![endif]-->
+        <!--[if gt IE 8]><!-->
+        
+    <link rel="stylesheet" href={%static "/css/layouts/gallery-grid.css" %}>
+
+        <!--<![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Julius+Sans+One">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato">
+  
+    
+        <!--[if lte IE 8]>
+            <link rel="stylesheet" href="css/layouts/gallery-old-ie.css">
+        <![endif]-->
+        <!--[if gt IE 8]><!-->
+            <link rel="stylesheet" href={%static "css/layouts/gallery.css" %}>
+        <!--<![endif]-->
+    
+    <link rel="stylesheet" href={%static "/css/pure-release-0.6.0/grids-responsive-min.css" %}>
+    <link rel="stylesheet" href={%static "css/layouts/blog.css" %}>
+    <link rel="stylesheet" href={%static "css/layouts/pricing.css" %}>
+
+    <link rel="stylesheet" href={%static "/css/mystyle.css" %}>
+
+
+</head>
+
+{% load i18n %}
+{% get_available_languages as LANGUAGES %} 
+{% get_current_language as LANGUAGE_CODE %}
+
+<div id="layout" class="pure-g " >
+    <div class="sidebar pure-u-1 pure-u-md-1-4{% block navbarbkg %}{% endblock %} " >
+        <div class="header ">
+            
+                <h1 class="brand-title text-box-head"></h1>
+ 
+                <nav class="nav">
+                   {% block navbar%}{% endblock %}
+                </nav>
+        </div>
+    </div>
+
+    <div class="content pure-u-1 pure-u-md-3-4 index-body">
+        
+        <div class="site-header">
+            <div class="pure-menu pure-menu-horizontal">
+                <a class="pure-menu-heading" href="/">GRANSASSOSKI.it</a>
+
+                <ul class="pure-menu-list">
+                    <!-- <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Home</a></li> -->
+                    <li class="pure-menu-item"><a href="/montagna" class="pure-menu-link">Montagna</a></li>
+                    <li class="pure-menu-item"><a href="/accalascio" class="pure-menu-link">Affittacamere</a></li>
+                    <li class="pure-menu-item"><a href="/eventi" class="pure-menu-link">Prossimi Eventi</a></li>
+                    <li class="pure-menu-item"><a href="/contatti" class="pure-menu-link">Dove Siamo  Contatti</a></li>
+                    <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+                        <a href="#" id="menuLink1" class="pure-menu-link">Language</a>
+                        <ul class="pure-menu-children">
+                            {% for language in LANGUAGES %}
+                            <li class="pure-menu-item"><a href="{{language.0}}" class="pure-menu-link">{{language.1}}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+
+
+        {% block content%}{% endblock %}
+
+        <div class="footer">
+            <div class="pure-menu pure-menu-horizontal">
+                <ul>
+                    <li class="pure-menu-item"><a href="http://purecss.io/" class="pure-menu-link">About</a></li>
+                    <li class="pure-menu-item"><a href="http://twitter.com/yuilibrary/" class="pure-menu-link">Twitter</a></li>
+                    <li class="pure-menu-item"><a href="http://github.com/yahoo/pure/" class="pure-menu-link">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
